@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">bsdiffDemo</string>
+    <string name="diff_old">单击选择旧版本apk</string>
+    <string name="diff_new">单击选择新版本apk</string>
+    <string name="diff_patch">单击选择补丁文件</string>
+    <string name="generate_name">输入生成文件名</string>
+</resources>

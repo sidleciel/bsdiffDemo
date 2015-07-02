@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context=".activity.BsdiffDemoActivity">
+
+    <EditText
+            android:id="@+id/text_old"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:ems="10"
+            android:hint="旧版本" android:layout_alignParentRight="true">
+
+        <requestFocus/>
+    </EditText>
+    <EditText
+            android:id="@+id/text_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/text_old"
+            android:layout_marginTop="24dp"
+            android:layout_below="@+id/text_old"
+            android:ems="10"
+            android:hint="新版本" android:layout_alignParentRight="true"/>
+
+    <EditText
+            android:id="@+id/text_patcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/text_new"
+            android:layout_marginTop="21dp"
+            android:layout_below="@+id/text_new"
+            android:ems="10"
+            android:hint="补丁" android:layout_alignParentRight="true"/>
+    <RadioGroup
+            android:id="@+id/func_group"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="30dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_alignParentLeft="true" android:layout_below="@+id/text_patcher">
+        <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="生成Patch"
+                android:id="@+id/func_generate_patch"/>
+        <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="生成新包"
+                android:layout_marginLeft="21dp"
+                android:id="@+id/func_generate_new_apk"/>
+    </RadioGroup>
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relativeLayout"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true" android:layout_alignParentRight="true"
+            android:layout_below="@id/func_group">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" android:gravity="center_vertical|center_horizontal"
+                android:weightSum="1">
+            <Button
+                    android:id="@+id/execute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="执行" android:layout_weight="0.15"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
